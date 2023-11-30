@@ -1,0 +1,23 @@
+1. To install mplayer
+If you want to have some fun and play the video in the terminal itself, install mplayer 
+$sudo apt-get install mplayer
+To run
+mplayer -vo caca <movie_file>
+Eg:mplayer -vo caca video.mp4 //original video file
+_______________________________________________________________________________
+server.c execution
+gcc server.c -o server
+./server server.mp4 2009
+
+_________________________________________________________________________________
+client.c execution
+gcc client.c -o client
+./client video.mp4 127.0.0.1 2009
+
+__________________________________________________________________________________
+->video.mp4 was the original final which was present in the original directory
+->shared video.mp4 file by the client to the server
+->server received this file content on the server socket and copied it to a new file called server.mp4(File name given by the user as a commend line argument.)
+->open the newly created file
+mplayer -vo caca server.mp4
+
